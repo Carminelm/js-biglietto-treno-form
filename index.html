@@ -41,7 +41,7 @@
                     </form>
                     <div class="d-flex justify-content-center mt-3">
                         <!-- Bottoni -->
-                        <input class="me-4" type="button" id="genera" value="Calcola prezzo">
+                        <input class="me-4" type="button" id="Calcolo" value="Calcola prezzo">
                         <input type="button" id="azzera" value="Azzera">
                     </div>
 
@@ -51,6 +51,52 @@
             </div>
         </div>
     </div>
+    <h1 class="text-center"> Il tuo biglietto</h1>
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h4>Dettaglio passeggeri</h4>
+                    <div class="">
+                        <!-- RISULTATO  -->
+                        <div>Nome passeggero:</div>
+                        <span id="nomeCognomeDef"></span><br />
+                    </div>
+
+                </div>
+                <div class="col-8">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Offerta</th>
+                                <th scope="col">Carrozza</th>
+                                <th scope="col">Codice CP</th>
+                                <th scope="col">Costo biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span id="offerta"></span> </td>
+                                <td><span id="numeroCarrozza"></span> </td>
+                                <td><span id="codiceCp"></span> </td>
+                                <td> <span id="risultato"></span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+<!--file js  -->
+<script src="main.js"></script>
     
 </body>
 </html>

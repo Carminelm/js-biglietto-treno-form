@@ -1,45 +1,59 @@
-// Chiediamo all' utente il numero di km che vuole percorrere
-
-let userKM = prompt('Inserisci i kilometri che vuoi percorrere');
 
 
-console.log(userKM);
+//kilometri 
 
-// Chiediamo all'utente la sua eta
-
-let userAge = prompt ('Inserisci la tua età');
-
-console.log(userAge);
-
-// Calcolo costo per kilometro 
-
-let KMcost = userKM * 0.21;
-
-console.log(KMcost);
-
+let userKM;
 
 // Prezzi per Età
 
 let trainPrice;
 
-if (userAge > 65) {
+// Tipologia Biglietto
 
-    trainPrice = (KMcost * 0.126).toFixed(2)
-}
-
-else if  (userAge < 18) {
-
-    trainPrice = (KMcost * 0.168).toFixed(2)
-}
-
-else  {
-
-    trainPrice = KMcost.toFixed(2)
-}
-
-console.log(trainPrice);
+let userTicket;
 
 
-// html 
+// pulsanti
 
+const pulsanteGenera = document.getElementById('Calcolo');
+
+
+pulsanteGenera.addEventListener('click', function() { 
+    //input km e anni utente
+    let userKM  = document.getElementById("km").value;
+    let userAge = document.getElementById("eta").value;
+
+    // Calcolo costo per kilometro 
+
+    let KMcost = userKM * 0.21;
+
+    if (userAge === "3") {
+
+        userTicket = "Biglietto Over"
+
+        trainPrice = (KMcost * 0.126).toFixed(2)
+    }
+    
+    else if  (userAge === "2") {
+
+        userTicket = "Biglietto under"
+    
+        trainPrice = (KMcost * 0.168).toFixed(2)
+    }
+    
+    else  {
+
+        userTicket = "Biglietto standard "
+    
+        trainPrice = KMcost.toFixed(2)
+    }
+
+     //RISULTATO A VIDEO
+     document.getElementById("offerta").innerHTML = userTicket;
+     document.getElementById("risultato").innerHTML = trainPrice;
+     document.getElementById("nomeCognomeDef").innerHTML = document.getElementById("nomecognome").value;
+
+
+
+});
 
